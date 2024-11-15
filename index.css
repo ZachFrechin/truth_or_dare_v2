@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Couleur de fond sombre */
+    color: #ffffff; /* Texte en blanc */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  /* Headers */
+  h1, h3 {
+    color: #ffffff;
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  /* Input and Button Styles */
+  input[type="text"] {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 12px 20px;
+    margin: 5px auto;
+    border: none;
+    border-radius: 30px; /* Arrondi des boutons */
+    background-color: #ffffff; /* Couleur blanche */
+    color: #121212; /* Texte noir */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 250px; /* Réduit la largeur max des boutons */
+    width: 90%; /* Adaptable aux petits écrans */
+    display: block;
+    box-sizing: border-box;
+  }
+  
+  button:hover {
+    background-color: #cccccc; /* Légèrement gris au survol */
+    color: #121212;
+  }
+  
+  /* List Styles */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  ul li {
+    background-color: #1e1e1e;
+    padding: 12px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid #333333;
+  }
+  
+  /* Game Controls and Sections */
+  .game-controls, .question-section {
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #currentPlayer {
+    margin: 20px 0;
+    font-size: 1.2rem;
+  }
+  
+  .question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    height: 100px; /* Zone fixe pour afficher la question */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  
+    button {
+      font-size: 1rem;
+      max-width: 90%; /* Boutons moins larges sur téléphone */
+      margin: 5px auto;
+    }
+  
+    input[type="text"] {
+      font-size: 1rem;
+      max-width: 90%; /* Champs d'entrée réduits */
+    }
+  
+    ul {
+      max-width: 100%;
+    }
+  
+    .game-controls, .question-section {
+      max-width: 100%;
+    }
+  
+    .question {
+      height: 120px; /* Augmente la zone fixe pour les téléphones */
+      font-size: 1rem;
+    }
+  }
+  

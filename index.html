@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+
+  <title>Action ou Vérité</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .player-list, .game-controls, .question-section {
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .question {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Action ou Vérité</h1>
+
+  <!-- Section pour ajouter des joueurs -->
+  <div class="player-list">
+    <h3>Ajouter des joueurs</h3>
+    <input type="text" id="playerName" placeholder="Nom du joueur">
+    <button onclick="addPlayer()">Ajouter</button>
+    <ul id="players"></ul>
+  </div>
+
+  <!-- Contrôles du jeu -->
+  <div class="game-controls">
+    <button id="startGame" onclick="startGame()">Lancer la partie</button>
+    <div id="currentPlayer" class="hidden"></div>
+    <div id="actionTruthButtons" class="hidden">
+      <button onclick="choose('action')">Action</button>
+      <button onclick="choose('verité')">Vérité</button>
+    </div>
+  </div>
+
+  <!-- Section pour afficher la question -->
+  <div class="question-section hidden" id="questionSection">
+    <div id="question"></div>
+    <button onclick="nextTurn()">OK</button>
+    <button onclick="nextTurn()">Give Up</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
